@@ -1,0 +1,179 @@
+{
+  "schema": "pvs-v5-scene-registry-v1",
+  "experiment": "gcof_pvs_v5_generalizable_unified_v1",
+  "surfacePointsPerUnit": 256,
+  "relationAnchors": 12,
+  "relationTopK": 8,
+  "candidateFovYDeg": 66,
+  "renderFovYDeg": 60,
+  "trainingPermissions": {
+    "sourceSceneAllowedSplits": [
+      "train",
+      "calibration",
+      "validation"
+    ],
+    "heldOutSceneGeometryOnly": true,
+    "heldOutSceneLabelsAllowedForTraining": false,
+    "testAllowedForSelection": false
+  },
+  "compiledOutputRoot": "compiled",
+  "scenes": [
+    {
+      "id": "hkust",
+      "displayName": "HKUST",
+      "family": "bim-campus",
+      "poseDataset": "scenes/hkust/pose_csr",
+      "assetsDir": "scenes/hkust/assets",
+      "runtimeMeta": "scenes/hkust/assets/runtimeVisibilityMeta.json",
+      "glbIndex": "scenes/hkust/assets/glbIndex.json",
+      "viewCell": {
+        "shape": "horizontal_disk",
+        "halfExtentM": [
+          2,
+          2,
+          0
+        ]
+      },
+      "cameraClipM": [
+        0.01,
+        1000000
+      ],
+      "splitCounts": {
+        "train": 5926,
+        "calibration": 659,
+        "validation": 730,
+        "test": 684
+      }
+    },
+    {
+      "id": "ifcbench_metropolis",
+      "displayName": "IFCBench/Metropolis",
+      "family": "bim-city",
+      "poseDataset": "scenes/ifcbench_metropolis/pose_csr",
+      "assetsDir": "scenes/ifcbench_metropolis/assets",
+      "runtimeMeta": "scenes/ifcbench_metropolis/assets/runtimeVisibilityMeta.json",
+      "glbIndex": "scenes/ifcbench_metropolis/assets/glbIndex.json",
+      "viewCell": {
+        "shape": "camera_aligned_box",
+        "halfExtentM": [
+          2.5,
+          2.5,
+          1
+        ]
+      },
+      "cameraClipM": [
+        0.01,
+        1000000
+      ],
+      "splitCounts": {
+        "train": 19647,
+        "calibration": 2183,
+        "validation": 2712,
+        "test": 2710
+      }
+    },
+    {
+      "id": "sponza_64k",
+      "displayName": "Sponza 64 KiB",
+      "family": "graphics-indoor",
+      "poseDataset": "scenes/sponza_64k/pose_csr",
+      "assetsDir": "scenes/sponza_64k/assets",
+      "runtimeMeta": "scenes/sponza_64k/assets/runtimeVisibilityMeta.json",
+      "glbIndex": "scenes/sponza_64k/assets/glbIndex.json",
+      "viewCell": {
+        "shape": "horizontal_disk",
+        "halfExtentM": [
+          0.75,
+          0.75,
+          0
+        ]
+      },
+      "cameraClipM": [
+        0.01,
+        1000000
+      ],
+      "splitCounts": {
+        "train": 4800,
+        "calibration": 528,
+        "validation": 672,
+        "test": 672
+      }
+    },
+    {
+      "id": "viking_village_64k",
+      "displayName": "Viking Village 64 KiB",
+      "family": "graphics-outdoor",
+      "poseDataset": "scenes/viking_village_64k/pose_csr",
+      "assetsDir": "scenes/viking_village_64k/assets",
+      "runtimeMeta": "scenes/viking_village_64k/assets/runtimeVisibilityMeta.json",
+      "glbIndex": "scenes/viking_village_64k/assets/glbIndex.json",
+      "viewCell": {
+        "shape": "horizontal_disk",
+        "halfExtentM": [
+          0.75,
+          0.75,
+          0
+        ]
+      },
+      "cameraClipM": [
+        0.01,
+        1000000
+      ],
+      "splitCounts": {
+        "train": 1944,
+        "calibration": 216,
+        "validation": 276,
+        "test": 276
+      }
+    },
+    {
+      "id": "big_city_64k",
+      "displayName": "Big City 64 KiB",
+      "family": "graphics-city",
+      "poseDataset": "scenes/big_city_64k/pose_csr",
+      "assetsDir": "scenes/big_city_64k/assets",
+      "runtimeMeta": "scenes/big_city_64k/assets/runtimeVisibilityMeta.json",
+      "glbIndex": "scenes/big_city_64k/assets/glbIndex.json",
+      "viewCell": {
+        "shape": "horizontal_disk",
+        "halfExtentM": [
+          0.75,
+          0.75,
+          0
+        ]
+      },
+      "cameraClipM": [
+        0.01,
+        1000000
+      ],
+      "splitCounts": {
+        "train": 11580,
+        "calibration": 1284,
+        "validation": 1608,
+        "test": 1608
+      }
+    }
+  ],
+  "synthetic": {
+    "sceneCount": 120,
+    "trainSceneCount": 96,
+    "validationSceneCount": 12,
+    "diagnosticSceneCount": 12,
+    "sceneFamilies": [
+      "room-corridor",
+      "campus-courtyard",
+      "urban-canyon",
+      "industrial-platform",
+      "mixed-repetition-clutter"
+    ],
+    "unitsPerScene": [
+      256,
+      4096
+    ],
+    "targetUnitKiB": [
+      32,
+      64,
+      128
+    ]
+  }
+}
